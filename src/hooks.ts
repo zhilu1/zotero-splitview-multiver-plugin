@@ -8,6 +8,7 @@ import {
 import { getString, initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { createZToolkit } from "./utils/ztoolkit";
+import { SplitViewFactory } from "./modules/splitView";
 
 async function onStartup() {
   await Promise.all([
@@ -83,6 +84,8 @@ async function onMainWindowLoad(win: _ZoteroTypes.MainWindow): Promise<void> {
   PromptExampleFactory.registerConditionalCommandExample();
 
   await Zotero.Promise.delay(1000);
+
+  SplitViewFactory.registerMenu();
 
   popupWin.changeLine({
     progress: 100,

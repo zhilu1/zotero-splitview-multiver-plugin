@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Split View</title>
+    <link rel="stylesheet" href="splitView.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <span id="splitview-title"></span>
+      <div class="toolbar__actions">
+        <label id="splitview-left-label" for="splitview-left"></label>
+        <select id="splitview-left"></select>
+        <span class="toolbar__divider">⇄</span>
+        <label id="splitview-right-label" for="splitview-right"></label>
+        <select id="splitview-right"></select>
+      </div>
+    </header>
+    <main class="splitview">
+      <section class="pane">
+        <iframe
+          id="splitview-frame-left"
+          class="pane__frame"
+          title="Left PDF"
+        ></iframe>
+      </section>
+      <section class="pane">
+        <iframe
+          id="splitview-frame-right"
+          class="pane__frame"
+          title="Right PDF"
+        ></iframe>
+      </section>
+    </main>
+    <script type="text/javascript" src="splitView.js"></script>
+  </body>
+</html>
